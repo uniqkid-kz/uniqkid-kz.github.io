@@ -55,24 +55,20 @@ function findProduct({ main, category, name, avoid = [] } = {}) {
 }
 
 function recommendedProducts() {
-  const criteria = [
-    { category: "Беговые дорожки" },
-    { category: "Велотренажеры" },
-    { category: "Компьютерные и офисные кресла" },
-    { category: "Кофеварки и кофемашины" },
-    { category: "Электрические массажеры" },
-    { category: "Степперы" },
+  const picks = [
+    { id: "141052110" },
+    { id: "167130729", name: "Велотренажер UNIQKID BEE2" },
+    { id: "177401547", name: "Стул UNIQKID Indigo" },
+    { id: "176880411", name: "Очиститель воздуха UNIQKID AirSense" },
+    { id: "163995760" },
+    { id: "160820227" },
   ];
-  const selected = [];
-  criteria.forEach((criterion) => {
-    const product = findProduct({ ...criterion, avoid: selected });
-    if (product) selected.push(product);
-  });
-  for (const product of state.products) {
-    if (selected.length >= 6) break;
-    if (!selected.some((item) => item.product_id === product.product_id) && imageOf(product)) selected.push(product);
-  }
-  return selected;
+  return picks
+    .map((pick) => {
+      const product = state.products.find((item) => String(item.product_id) === pick.id);
+      return product ? { ...product, name: pick.name || product.name } : null;
+    })
+    .filter(Boolean);
 }
 
 function makeCard(product) {
@@ -103,13 +99,6 @@ function renderVisualSections() {
   const office = findProduct({ category: "Компьютерные и офисные кресла", name: "Ergo" }) || findProduct({ category: "Компьютерные и офисные кресла" });
   const home = findProduct({ category: "Массажные кресла" }) || findProduct({ category: "Кресла" });
   const detail = findProduct({ category: "Кофеварки и кофемашины" }) || findProduct({ category: "Очистители и увлажнители" });
-
-  const heroImage = document.querySelector("#hero-image");
-  heroImage.src = imageOf(hero, Math.min(1, (hero?.images?.length || 1) - 1));
-  document.querySelector("#promo-sport-image").src = imageOf(hero);
-  document.querySelector("#promo-office-image").src = imageOf(office);
-  document.querySelector("#about-image-main").src = imageOf(home);
-  document.querySelector("#about-image-small").src = imageOf(detail);
 
   const representative = {
     "Спорт товары": hero,
