@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UNIQKID — товары для спорта, дома, офиса и кемпинга с доставкой по Казахстану.">
+  <title>UNIQKID — товары для активной и комфортной жизни</title>
+  <link rel="preconnect" href="https://resources.cdn-kaspi.kz" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="UNIQKID — на главную">
+        <img src="./assets/logo.svg" alt="UNIQKID">
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#about">О бренде</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#warranty">Гарантия</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <label class="header-search" aria-label="Поиск по каталогу">
+        <input id="header-search" type="search" placeholder="Поиск товаров…" autocomplete="off">
+        <span aria-hidden="true">⌕</span>
+      </label>
+      <a class="header-action" href="#catalog" aria-label="Перейти в каталог">♡</a>
+      <a class="header-action cart-action" href="#catalog" aria-label="Корзина">⌑<b>0</b></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="shell hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Здоровье · комфорт · современный дом</p>
+        <h1>UNIQKID —<br>больше, чем техника</h1>
+        <p class="hero-lead">Тренажёры, мебель и техника для комфортной, активной и современной жизни.</p>
+        <a class="button button-primary" href="#catalog">Перейти в каталог <span>→</span></a>
+        <div class="hero-benefits" aria-label="Преимущества">
+          <span><i>▱</i> Быстрая доставка</span>
+          <span><i>◇</i> Гарантия на товары</span>
+          <span><i>✦</i> Проверенное качество</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img id="hero-image" alt="Товар UNIQKID в интерьере">
+        <div class="hero-note">Создаём комфортную жизнь вместе с UNIQKID</div>
+      </div>
+    </section>
+
+    <section class="shell section" aria-labelledby="popular-title">
+      <div class="section-heading">
+        <h2 id="popular-title">Популярные категории</h2>
+        <a href="#catalog">Весь каталог <span>→</span></a>
+      </div>
+      <div id="main-category-cards" class="main-category-grid"></div>
+    </section>
+
+    <section class="shell promo-grid" aria-label="Подборки товаров">
+      <article class="promo-card promo-sport">
+        <div class="promo-copy">
+          <span>Для активной жизни</span>
+          <h2>Тренажёры UNIQKID для дома</h2>
+          <p>Оставайтесь в форме в любое время</p>
+          <button type="button" data-promo-category="Спорт товары">Смотреть тренажёры <b>→</b></button>
+        </div>
+        <img id="promo-sport-image" alt="Тренажёр UNIQKID">
+      </article>
+      <article class="promo-card promo-office">
+        <div class="promo-copy">
+          <span>Комфорт в каждой детали</span>
+          <h2>Офисная мебель UNIQKID</h2>
+          <p>Эргономика, стиль и поддержка в течение дня</p>
+          <button type="button" data-promo-category="Для офиса">Выбрать мебель <b>→</b></button>
+        </div>
+        <img id="promo-office-image" alt="Офисное кресло UNIQKID">
+      </article>
+    </section>
+
+    <section class="shell section hits-section" aria-labelledby="hits-title">
+      <div class="section-heading">
+        <h2 id="hits-title"><span class="flame">◆</span> Хиты продаж</h2>
+        <a href="#catalog">Смотреть все <span>→</span></a>
+      </div>
+      <div id="hits-grid" class="hits-grid"></div>
+    </section>
+
+    <section id="delivery" class="shell trust-row" aria-label="Сервис UNIQKID">
+      <div><strong>◇</strong><span>Официальный бренд<br>UNIQKID</span></div>
+      <div><strong>▱</strong><span>Доставка по всему<br>Казахстану</span></div>
+      <div id="warranty"><strong>⬡</strong><span>Гарантия<br>на все товары</span></div>
+      <div><strong>◉</strong><span>Поддержка<br>и консультация</span></div>
+    </section>
+
+    <section id="about" class="shell about-section">
+      <div class="about-copy">
+        <p class="eyebrow">О бренде</p>
+        <h2>UNIQKID — современные решения для вашего комфорта</h2>
+        <p>Мы собрали практичные товары для спорта, дома, офиса и отдыха, чтобы каждый день был удобнее, здоровее и продуктивнее.</p>
+        <a class="button button-primary" href="#catalog">Выбрать товар <span>→</span></a>
+      </div>
+      <div class="about-visual" aria-label="Товары UNIQKID">
+        <img id="about-image-main" alt="Товары UNIQKID для дома">
+        <img id="about-image-small" alt="Товар UNIQKID">
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-section">
+      <div class="shell">
+        <div class="catalog-intro">
+          <div>
+            <p class="eyebrow">Выберите своё</p>
+            <h2>Каталог UNIQKID</h2>
+            <p>Только актуальные направления бренда — без лишних разделов.</p>
+          </div>
+          <div class="catalog-controls">
+            <label>
+              <span>Поиск</span>
+              <input id="search" type="search" placeholder="Название или категория" autocomplete="off">
+            </label>
+            <label>
+              <span>Сортировка</span>
+              <select id="sort">
+                <option value="featured">Сначала рекомендуемые</option>
+                <option value="price-asc">Сначала дешевле</option>
+                <option value="price-desc">Сначала дороже</option>
+                <option value="name">По названию</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div id="main-tabs" class="main-tabs" aria-label="Главные категории"></div>
+        <div id="subcategory-tabs" class="subcategory-tabs" aria-label="Подкатегории"></div>
+        <div id="product-grid" class="product-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <h3>Ничего не найдено</h3>
+          <p>Попробуйте другой запрос или выберите другую категорию.</p>
+        </div>
+        <button id="load-more" class="button button-secondary" type="button">Показать ещё</button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts" class="site-footer">
+    <div class="shell footer-inner">
+      <img src="./assets/logo.svg" alt="UNIQKID">
+      <p>Товары для активной, удобной и современной жизни.</p>
+      <div>
+        <a href="https://kaspi.kz/shop/" target="_blank" rel="noopener noreferrer">Магазин на Kaspi.kz</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#about">О бренде</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="product-dialog" class="product-dialog">
+    <button id="dialog-close" class="dialog-close" type="button" aria-label="Закрыть">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <template id="product-card-template">
+    <article class="product-card">
+      <button class="product-open" type="button">
+        <span class="product-image-wrap">
+          <img class="product-image" loading="lazy" alt="">
+          <span class="heart" aria-hidden="true">♡</span>
+        </span>
+        <span class="product-category"></span>
+        <strong class="product-name"></strong>
+        <span class="product-meta"></span>
+        <span class="product-bottom">
+          <b class="product-price"></b>
+          <i aria-hidden="true">⌑</i>
+        </span>
+      </button>
+    </article>
+  </template>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
