@@ -39,7 +39,7 @@ img { max-width: 100%; display: block; }
 .brand-stack { flex: 0 0 auto; display: grid; justify-items: start; gap: 3px; }
 .brand { display: block; }
 .brand img { width: 154px; height: 34px; object-fit: contain; }
-.contact-phone { white-space: nowrap; font-size: 16px; font-weight: 900; line-height: 1; letter-spacing: -.02em; }
+.contact-phone { white-space: nowrap; font-size: 20px; font-weight: 900; line-height: 1; letter-spacing: -.03em; }
 .contact-phone:hover { color: var(--red); }
 .main-nav { display: flex; gap: 26px; margin-left: 20px; font-size: 14px; font-weight: 600; }
 .main-nav a { transition: color .2s ease; }
@@ -90,7 +90,11 @@ img { max-width: 100%; display: block; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { color: #fff; background: var(--gradient); box-shadow: 0 13px 28px rgba(239, 28, 42, .22); }
 .whatsapp-button { color: #fff; background: linear-gradient(135deg, #128c4a, #25d366); box-shadow: 0 13px 28px rgba(18, 140, 74, .2); }
-.hero-benefits { margin-top: 62px; display: flex; gap: 28px; font-size: 12px; font-weight: 700; }
+.hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.hero-whatsapp { min-width: 260px; min-height: 68px; display: grid; gap: 3px; padding: 10px 24px; text-align: left; justify-items: start; }
+.hero-whatsapp span { font-size: 12px; font-weight: 750; opacity: .9; }
+.hero-whatsapp strong { font-size: 23px; line-height: 1.05; letter-spacing: -.025em; }
+.hero-benefits { margin-top: 34px; display: flex; gap: 28px; font-size: 12px; font-weight: 700; }
 .hero-benefits span { display: flex; align-items: center; gap: 9px; max-width: 145px; }
 .benefit-icon { flex: 0 0 26px; width: 26px; height: 26px; color: var(--red); fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .hero-media { min-width: 0; position: relative; overflow: hidden; }
@@ -276,7 +280,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 580px) {
   .shell { width: calc(100% - 20px); }
-  .contact-phone { font-size: 12px; }
+  .contact-phone { font-size: 15px; }
   .hero { margin-top: 10px; border-radius: 20px; }
   .hero-copy { padding: 36px 20px 22px; }
   .hero h1 { font-size: 43px; }
