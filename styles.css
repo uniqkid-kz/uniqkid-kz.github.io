@@ -38,6 +38,10 @@ img { max-width: 100%; display: block; }
 .header-inner { height: 82px; display: flex; align-items: center; gap: 22px; }
 .brand { flex: 0 0 auto; }
 .brand img { width: 154px; height: 34px; object-fit: contain; }
+.contact-phone { flex: 0 0 auto; display: grid; gap: 2px; padding-left: 18px; border-left: 1px solid var(--line); line-height: 1.15; }
+.contact-phone span { color: var(--muted); font-size: 10px; font-weight: 750; text-transform: uppercase; letter-spacing: .05em; }
+.contact-phone strong { white-space: nowrap; font-size: 14px; }
+.contact-phone:hover strong { color: var(--red); }
 .main-nav { display: flex; gap: 26px; margin-left: 20px; font-size: 14px; font-weight: 600; }
 .main-nav a { transition: color .2s ease; }
 .main-nav a:hover { color: var(--red); }
@@ -86,6 +90,7 @@ img { max-width: 100%; display: block; }
 }
 .button:hover { transform: translateY(-2px); }
 .button-primary { color: #fff; background: var(--gradient); box-shadow: 0 13px 28px rgba(239, 28, 42, .22); }
+.whatsapp-button { color: #fff; background: linear-gradient(135deg, #128c4a, #25d366); box-shadow: 0 13px 28px rgba(18, 140, 74, .2); }
 .hero-benefits { margin-top: 62px; display: flex; gap: 28px; font-size: 12px; font-weight: 700; }
 .hero-benefits span { display: flex; align-items: center; gap: 9px; max-width: 145px; }
 .hero-benefits i { color: var(--red); font-size: 23px; font-style: normal; }
@@ -154,10 +159,20 @@ img { max-width: 100%; display: block; }
 .trust-row strong { color: var(--red); font-size: 32px; }
 .trust-row span { font-size: 14px; font-weight: 650; line-height: 1.35; }
 
+.consultation-section { margin-top: 34px; padding: 34px 40px; border-radius: 24px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; background: linear-gradient(115deg, #f0fff5, #ffffff 56%, #e8fff0); border: 1px solid #cdeed8; }
+.consultation-icon { width: 70px; height: 70px; display: grid; place-items: center; border-radius: 22px; color: #fff; background: linear-gradient(135deg, #128c4a, #25d366); font-size: 34px; box-shadow: 0 14px 28px rgba(18, 140, 74, .18); }
+.consultation-copy .eyebrow { margin-bottom: 8px; color: #128c4a; }
+.consultation-copy h2 { margin: 0; font-size: clamp(27px, 3vw, 40px); line-height: 1.05; letter-spacing: -.035em; }
+.consultation-copy > p:last-child { margin: 10px 0 0; color: var(--muted); }
+.consultation-contact { display: grid; justify-items: end; gap: 12px; }
+.consultation-phone { font-size: 22px; font-weight: 900; letter-spacing: -.025em; }
+.consultation-phone:hover { color: #128c4a; }
+
 .about-section { padding-top: 58px; padding-bottom: 62px; display: grid; grid-template-columns: .82fr 1.18fr; gap: 42px; align-items: center; }
 .about-copy { padding: 24px; }
 .about-copy h2 { margin: 0; max-width: 520px; font-size: clamp(36px, 4vw, 58px); line-height: 1.02; letter-spacing: -.05em; }
 .about-copy > p:not(.eyebrow) { max-width: 530px; margin: 22px 0 26px; color: var(--muted); font-size: 17px; line-height: 1.55; }
+.about-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .about-visual { position: relative; min-height: 430px; border-radius: 34px; background: radial-gradient(circle at 20% 80%, #ff847d, transparent 34%), linear-gradient(140deg, #fff4f0, #ead9cc); overflow: hidden; }
 .about-visual::before { content: ""; position: absolute; left: -90px; bottom: -110px; width: 300px; height: 300px; border-radius: 50%; background: var(--red); opacity: .15; }
 .about-visual #about-image-main { width: 72%; height: 100%; margin-left: auto; object-fit: contain; object-position: right center; filter: drop-shadow(0 30px 20px rgba(50,20,20,.18)); }
@@ -207,13 +222,15 @@ img { max-width: 100%; display: block; }
 .dialog-info h2 { margin: 0; font-size: clamp(28px, 4vw, 44px); line-height: 1.04; letter-spacing: -.04em; }
 .dialog-price { margin: 22px 0; font-size: 31px; font-weight: 900; }
 .dialog-description { color: var(--muted); line-height: 1.55; }
-.dialog-kaspi { margin: 10px 0 24px; }
+.dialog-actions { margin: 10px 0 24px; display: flex; flex-wrap: wrap; gap: 10px; }
+.dialog-actions .button { flex: 1 1 190px; padding-inline: 16px; }
+.dialog-kaspi { margin: 0; }
 .specs { margin-top: 26px; border-top: 1px solid var(--line); }
 .specs h3 { margin: 24px 0 12px; font-size: 17px; }
 .spec-row { padding: 9px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; border-bottom: 1px solid #f0eded; font-size: 13px; }
 .spec-row span:first-child { color: var(--muted); }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .main-nav { display: none; }
   .header-search { margin-left: auto; width: min(420px, 46vw); }
   .hero { grid-template-columns: 52% 48%; min-height: 500px; }
@@ -241,6 +258,8 @@ img { max-width: 100%; display: block; }
   .trust-row > div:nth-child(2) { border-right: 0; }
   .trust-row > div { border-bottom: 1px solid var(--line); }
   .trust-row > div:nth-child(n+3) { border-bottom: 0; }
+  .consultation-section { grid-template-columns: auto 1fr; }
+  .consultation-contact { grid-column: 1 / -1; width: 100%; grid-template-columns: 1fr auto; align-items: center; justify-items: start; }
   .about-section { grid-template-columns: 1fr; }
   .catalog-intro { align-items: stretch; flex-direction: column; }
   .product-grid { grid-template-columns: repeat(3, 1fr); }
@@ -250,6 +269,9 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 580px) {
   .shell { width: calc(100% - 20px); }
+  .contact-phone { padding-left: 9px; }
+  .contact-phone span { display: none; }
+  .contact-phone strong { font-size: 11px; }
   .header-action:first-of-type { display: none; }
   .hero { margin-top: 10px; border-radius: 20px; }
   .hero-copy { padding: 36px 20px 22px; }
@@ -274,6 +296,11 @@ img { max-width: 100%; display: block; }
   .trust-row > div { padding: 12px 8px; justify-content: flex-start; gap: 10px; }
   .trust-row strong { font-size: 24px; }
   .trust-row span { font-size: 11px; }
+  .consultation-section { padding: 24px 20px; grid-template-columns: 1fr; gap: 17px; }
+  .consultation-icon { width: 54px; height: 54px; border-radius: 17px; }
+  .consultation-contact { grid-column: auto; grid-template-columns: 1fr; justify-items: stretch; }
+  .consultation-phone { font-size: 20px; }
+  .consultation-contact .button, .about-actions .button { width: 100%; }
   .about-copy { padding: 10px; }
   .about-copy h2 { font-size: 39px; }
   .about-visual { min-height: 300px; }

@@ -232,7 +232,10 @@ function openProduct(product) {
         <h2>${escapeHtml(product.name)}</h2>
         <div class="dialog-price">${formatPrice.format(product.price || 0)} ₸</div>
         <p class="dialog-description">${escapeHtml(description)}</p>
-        <a class="button button-primary dialog-kaspi" href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer">Открыть на Kaspi.kz <span>→</span></a>
+        <div class="dialog-actions">
+          <a class="button button-primary dialog-kaspi" href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer">Открыть на Kaspi.kz <span>→</span></a>
+          <a class="button whatsapp-button" href="https://wa.me/77072598547" target="_blank" rel="noopener noreferrer">Написать в WhatsApp <span>→</span></a>
+        </div>
         ${specsHtml(product)}
       </div>
     </div>
